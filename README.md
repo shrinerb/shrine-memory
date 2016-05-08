@@ -2,8 +2,7 @@
 
 Provides in-memory storage for Shrine.
 
-This storage generally shouldn't be used in real applications, but it is handy
-for testing.
+This storage shouldn't be used in production, but it is handy to use in tests.
 
 ## Installation
 
