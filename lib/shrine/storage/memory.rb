@@ -55,8 +55,7 @@ class Shrine
         "memory://#{id}"
       end
 
-      def clear!(confirm = nil)
-        raise Shrine::Confirm unless confirm == :confirm
+      def clear!
         store.clear
       end
     end
