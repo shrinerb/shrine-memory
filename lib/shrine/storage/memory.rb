@@ -27,10 +27,6 @@ class Shrine
         io.is_a?(UploadedFile) && io.storage.is_a?(Storage::Memory)
       end
 
-      def stream(id)
-        yield read(id), read(id).length
-      end
-
       def open(id)
         StringIO.new(store.fetch(id))
       end
