@@ -40,7 +40,7 @@ class Shrine
       end
 
       def delete(id)
-        store.delete(id) or raise KeyError, "key not found: #{id.inspect}"
+        store.delete(id)
       end
 
       def multi_delete(ids)

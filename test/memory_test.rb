@@ -12,16 +12,4 @@ describe Shrine::Storage::Memory do
   it "passes the linter" do
     Shrine::Storage::Linter.call(@memory)
   end
-
-  describe "#delete" do
-    it "raises an error when file is not found" do
-      assert_raises(KeyError) { @memory.delete("foo") }
-    end
-  end
-
-  describe "#multi_delete" do
-    it "raises an error when file is not found" do
-      assert_raises(KeyError) { @memory.multi_delete(["foo"]) }
-    end
-  end
 end
