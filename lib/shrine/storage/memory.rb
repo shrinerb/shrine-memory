@@ -14,14 +14,6 @@ class Shrine
         store[id] = io.read
       end
 
-      def move(io, id, *)
-        store[id] = io.storage.delete(io.id)
-      end
-
-      def movable?(io, id)
-        io.is_a?(UploadedFile) && io.storage.is_a?(Storage::Memory)
-      end
-
       def open(id)
         StringIO.new(store.fetch(id))
       end
@@ -32,10 +24,6 @@ class Shrine
 
       def delete(id)
         store.delete(id)
-      end
-
-      def multi_delete(ids)
-        ids.each { |id| delete(id) }
       end
 
       def url(id, **options)
