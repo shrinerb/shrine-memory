@@ -1,6 +1,5 @@
 require "shrine"
 require "stringio"
-require "down"
 
 class Shrine
   module Storage
@@ -15,10 +14,6 @@ class Shrine
         store[id] = io.read
       end
 
-      def download(id)
-        Down.copy_to_tempfile(id, open(id))
-      end
-
       def move(io, id, *)
         store[id] = io.storage.delete(io.id)
       end
@@ -29,10 +24,6 @@ class Shrine
 
       def open(id)
         StringIO.new(store.fetch(id))
-      end
-
-      def read(id)
-        store.fetch(id).dup
       end
 
       def exists?(id)
