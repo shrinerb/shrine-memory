@@ -26,5 +26,5 @@ This gem was inspired by [refile-memory].
 
 [MIT](/LICENSE.txt)
 
-[Shrine]: https://github.com/janko-m/shrine
+[Shrine]: https://github.com/shrinerb/shrine
 [refile-memory]: https://github.com/refile/refile-memory
