@@ -14,7 +14,7 @@ class Shrine
         store[id] = io.read
       end
 
-      def open(id)
+      def open(id, *)
         StringIO.new(store.fetch(id))
       end
 
