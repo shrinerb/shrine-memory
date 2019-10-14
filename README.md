@@ -2,7 +2,7 @@
 
 Provides in-memory storage for [Shrine].
 
-This storage shouldn't be used in production, but it is handy to use in tests.
+**This storage has been merged into the `shrine` gem in version 3.0.0.**
 
 ## Installation
 
